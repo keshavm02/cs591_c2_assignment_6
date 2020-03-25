@@ -1,4 +1,5 @@
 import unittest
+from Problem1 import *
 
 class TestProblem1(unittest.TestCase):
     def testProtocol(self):
