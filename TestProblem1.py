@@ -23,5 +23,11 @@ class TestProblem1(unittest.TestCase):
         protocol = splitter.getProtocol()
         self.assertEqual(protocol, 'https')
 
+    def testDomain(self):
+        url = 'https://www.google.com/some-path'
+        splitter = URL_Splitting(url)
+        domain = splitter.getDomain()
+        self.assertEqual(domain, 'www.google.com')
+
 if __name__ == "__main__":
     unittest.main()
