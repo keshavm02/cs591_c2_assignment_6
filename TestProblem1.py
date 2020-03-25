@@ -29,5 +29,20 @@ class TestProblem1(unittest.TestCase):
         domain = splitter.getDomain()
         self.assertEqual(domain, 'www.google.com')
 
+        url = 'ftp://bu.edu/'
+        splitter = URL_Splitting(url)
+        domain = splitter.getDomain()
+        self.assertEqual(domain, 'bu.edu')
+
+        url = 'http://www.facebook.com/home.php'
+        splitter = URL_Splitting(url)
+        domain = splitter.getDomain()
+        self.assertEqual(domain, 'www.facebook.com')
+
+        url = 'https://docs.python.org/3/library/unittest.html'
+        splitter = URL_Splitting(url)
+        domain = splitter.getDomain()
+        self.assertEqual(domain, 'docs.python.org')
+
 if __name__ == "__main__":
     unittest.main()

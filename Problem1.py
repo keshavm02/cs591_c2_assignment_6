@@ -4,3 +4,6 @@ class URL_Splitting():
 
     def getProtocol(self):
         return self.url.split('://')[0]
+
+    def getDomain(self):
+        return self.url.split('/')[2]
