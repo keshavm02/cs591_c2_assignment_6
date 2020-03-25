@@ -7,3 +7,6 @@ class URL_Splitting():
 
     def getDomain(self):
         return self.url.split('/')[2]
+
+    def getPath(self):
+        return self.url.split('/')[3:]

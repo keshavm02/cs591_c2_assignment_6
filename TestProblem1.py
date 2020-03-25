@@ -47,8 +47,8 @@ class TestProblem1(unittest.TestCase):
     def testPath(self):
         url = 'https://www.google.com/some-path'
         splitter = URL_Splitting(url)
-        domain = splitter.getDomain()
-        self.assertEqual(domain, 'some-path')
+        path = splitter.getPath()
+        self.assertEqual(path, 'some-path')
 
 if __name__ == "__main__":
     unittest.main()
