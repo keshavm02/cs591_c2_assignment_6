@@ -7,3 +7,6 @@ class TestProblem1(unittest.TestCase):
         url = 'https://www.google.com/some-path'
         protocol = getProtocol(url)
         self.assertEqual(protocol, 'https')
+
+if __name__ == "__main__":
+    unittest.main()
