@@ -9,20 +9,18 @@ Output: 10
 Explanation: The digit 1 occurs a total of 10 times in: 1, 10, 11, 12, 13, 14, 15, 16, 17
 
 """
-#assumption = list can not be empty
-def num_occurences(list, number):
-    list.sort()
-    count = 0
+def num_occurences(number):
     answer = 0
-    while (count < len(list)) and (list[count] <= number): #Stop when we reach the end or when the next number is bigger than our input
-        if list[count] <= 0: #skip all negative numbers and zero as well
-            count += 1
-            continue
-        curr_num_digits = [digits for digits in str(list[count])] #split the current number we are on into a list of digits
-        for digit in curr_num_digits:
+    if number <= 0:
+        return answer
+    else:
+        all_digits = ""
+        for x in range(number+1):
+            all_digits += str(x)
+        num_digits = [digits for digits in all_digits]
+        for digit in num_digits:
             if digit == "1": 
                 answer += 1
             else:
                 continue
-        count += 1
-    return answer
+        return answer
