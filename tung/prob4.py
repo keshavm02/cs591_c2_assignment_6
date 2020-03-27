@@ -11,14 +11,14 @@ Explanation: The digit 1 occurs a total of 10 times in: 1, 10, 11, 12, 13, 14, 1
 """
 def num_occurences(number):
     answer = 0
-    if number <= 0:
+    if number <= 0: #skip if number is negative to 0
         return answer
     else:
         all_digits = ""
-        for x in range(number+1):
+        for x in range(number+1): #for all numbers starting from 0 up to the inputed number, concatenate it and make it a huge string
             all_digits += str(x)
-        num_digits = [digits for digits in all_digits]
-        for digit in num_digits:
+        num_digits = [digits for digits in all_digits] #now seperate that stringed number into a list of digits
+        for digit in num_digits: #go through list and count the 1's
             if digit == "1": 
                 answer += 1
             else:
