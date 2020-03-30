@@ -1,5 +1,5 @@
 import unittest
-from gaby.Problem3 import *
+from Problem3 import *
 
 
 class MyTestCase(unittest.TestCase):
